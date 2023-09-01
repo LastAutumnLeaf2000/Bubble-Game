@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     width: 100%; 
+     height: 100%;
+    background-color: rgb(155, 184, 155);
+}
+
+#panel{
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 15px;
+    overflow:hidden; /* #ptop is the child of #panel and the height of ptop is 10% and it doesnt fit inside its parent #panel coz of border radius... so the bgcolor of #ptop starts to overflow out of the parent body outside of the border radius... that is why we use overflow hidden to hide the bgcolor from overflowing out of the parent's border radius*/
+}
+
+#ptop{
+    width: 100%;
+    height: 10%;
+    
+    display: flex;
+    align-items: center;
+    
+    /* gap:10px; */
+    /* justify-content: center; This wont work with justify content space-evenly... none of the other values will work...only 1 value of justify-content will work. */ 
+    justify-content: space-evenly;
+    background-color: rgb(72, 104, 72);
+}
+
+.elem{
+    width:12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3vw;
+    font-size: 1.3vmax;
+    color: white;
+    font-weight: 500;
+}
+.box{
+    background-color: white;
+    width: 1vw;
+    padding: .3vw 1.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15%;
+    color: rgb(18, 119, 57);
+    font-weight: 600;
+    font-size: 1.8vmax;
+}
+
+#pbtm{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1vmax;
+    padding: .3vw;
+}
+
+.bubble{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-color: rgb(18, 119, 57);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3vmax;
+    font-weight: 600;
+}
+
+.bubble:hover{
+    background-color: rgb(8, 70, 32);
+    cursor: pointer;
+}
+
+@media (max-width:700px){
+    .bubble{
+        width:30px;
+        height:30px;
+        font-size: 18px;
+    }
+    .box{
+        width: 28px;
+        height: 28px;
+        font-size:20px
+    }
+    .elem{
+        font-size: 13px;
+    }
+}
